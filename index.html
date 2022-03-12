@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Instagram Feed</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/b2933b47eb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://randojs.com/1.0.0.js"></script>
+    <script>
+      function showRandomNumber1() {
+        document.getElementById("likes-1").innerHTML = rando(1, 100);
+      }
+      function showRandomNumber2() {
+        document.getElementById("likes-2").innerHTML = rando(1, 100);
+      }
+      function showRandomNumber3() {
+        document.getElementById("likes-3").innerHTML = rando(1, 100);
+      }
+      function showRandomNumber4() {
+        document.getElementById("likes-4").innerHTML = rando(1, 100);
+      }
+      function showRandomNumber5() {
+        document.getElementById("likes-5").innerHTML = rando(1, 100);
+      }
+      function showRandomNumber6() {
+        document.getElementById("likes-6").innerHTML = rando(1, 100);
+      }
+      function showRandomNumber7() {
+        document.getElementById("likes-7").innerHTML = rando(1, 100);
+      }
+      function showRandomNumber8() {
+        document.getElementById("likes-8").innerHTML = rando(1, 100);
+      }
+      function showRandomNumber9() {
+        document.getElementById("likes-9").innerHTML = rando(1, 100);
+      }
+    </script>
+  </head>
+
+  <body
+    onload="showRandomNumber1();showRandomNumber2();showRandomNumber3();showRandomNumber4();showRandomNumber5();showRandomNumber6();showRandomNumber7();showRandomNumber8();showRandomNumber9();"
+  >
+    <div class="container-fluid">
+      <div class="container-fluid sticky-top">
+        <nav class="navbar navbar-light bg-light navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/06/%C4%B0nstagram-Profilime-Kim-Bakt%C4%B1-1.png"
+                alt="logo"
+                width="200"
+              />
+            </a>
+          </div>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-success w-25"
+            style="width: 300px"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Create New Post
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade mt-4"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header d-flex flex-column">
+                  <textarea class="w-100 rounded p-2"></textarea>
+                  <div class="w-100 bg-white p-2">
+                    <button type="button" class="btn btn-white border">
+                      <i class="fa-solid fa-camera p-1"></i>
+                    </button>
+                    <button type="button" class="btn btn-white border">
+                      <i class="fa-solid fa-location-dot p-1"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="modal-body d-flex justify-content-end">
+                  <button
+                    type="button"
+                    class="btn btn-secondary m-1"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button type="button" class="btn btn-success m-1" href="#">
+                    Publish
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn btn-white dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div
+          class="row d-flex w-100 bg-white justify-content-center align-items-center"
+        >
+          <ul
+            class="nav nav-pills mb-3 d-flex justify-content-center align-items-center"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-home"
+                type="button"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+              >
+                <i class="fa-solid fa-table-cells"></i>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+              >
+                <i class="fa-regular fa-square"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+        >
+          <!-- Insert grid of Pictures here -->
+          <div class="container-fluid w-75">
+            <div class="row d-flex align-items-center">
+              <div class="col-4 px-0 d-flex justify-content-center">
+                <img
+                  class="img-fluid"
+                  src="https://www.rd.com/wp-content/uploads/2020/11/GettyImages-889552354-e1606774439626.jpg"
+                  alt="first-pic"
+                />
+              </div>
+              <div class="col-4 px-0 d-flex justify-content-center">
+                <img
+                  class="img-fluid"
+                  src="https://picjumbo.com/wp-content/uploads/young-woman-workingtyping-on-her-laptop-free-photo.jpg"
+                  alt="pic-2"
+                />
+              </div>
+              <div class="col-4 px-0 d-flex justify-content-center">
+                <img
+                  class="img-fluid"
+                  src="https://thumbs.dreamstime.com/b/seamless-greige-white-wavy-marl-stripe-texture-background-irregular-imperfect-striped-pattern-blurry-neutral-tone-wave-seamless-191196975.jpg"
+                  alt="pic-3"
+                />
+              </div>
+            </div>
+            <div class="row d-flex align-items-center">
+              <div class="col-4 px-0 d-flex justify-content-center">
+                <img
+                  class="img-fluid"
+                  src="https://i.pinimg.com/originals/e9/48/11/e948110b0b3f0f7183922ad084830f1b.jpg"
+                  alt="pic-4"
+                />
+              </div>
+              <div class="col-4 px-0 d-flex justify-content-center">
+                <img
+                  class="img-fluid"
+                  src="https://i.redd.it/exenkunkvo931.jpg"
+                  alt="pic-5"
+                />
+              </div>
+              <div class="col-4 px-0 d-flex justify-content-center">
+                <img
+                  class="img-fluid w-100"
+                  src="https://i.pinimg.com/originals/f4/5b/0f/f45b0fba5f7d79db4212f2e750468daa.gif"
+                  alt="pic-6"
+                />
+              </div>
+            </div>
+            <div class="row d-flex align-items-center">
+              <div class="col-4 px-0 d-flex justify-content-center">
+                <img
+                  src="https://m.media-amazon.com/images/I/61HwvtJXKGS._AC_SX522_.jpg"
+                  alt="pic-7"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-4 px-0 d-flex justify-content-center">
+                <img
+                  src="https://sep.yimg.com/ay/brandsonsale-store/80s-costumes-3.jpg"
+                  alt="pic-8"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-4 px-0 d-flex justify-content-center">
+                <img
+                  src="https://nebushumor.files.wordpress.com/2020/10/far-side_gary-larson_buffalo-bill_12-october-2020.jpg"
+                  alt="pic-9"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade container d-flex align-items-center flex-column bg-light"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+          <!-- insert feed of posts here -->
+          <div class="card w-50 my-4" id="post-1">
+            <div class="card-header d-flex justify-content-between">
+              <div>
+                <h5>My First Post</h5>
+              </div>
+              <div>
+                <h5>3/11</h5>
+              </div>
+            </div>
+            <img
+              src="https://www.rd.com/wp-content/uploads/2020/11/GettyImages-889552354-e1606774439626.jpg"
+              class="card-img-top"
+              alt="pic-1"
+            />
+            <div class="card-body">
+              <h5 class="card-title d-flex flex-row">
+                <div id="likes-1" class="me-2"></div>
+                <span> Likes</span>
+              </h5>
+              <h5 class="card-text">
+                Here is the first post on my Instagram feed!
+              </h5>
+              <div class="container-fluid d-flex justify-content-between">
+                <div>
+                  <i class="fa-regular fa-heart"></i>
+                  <input
+                    type="text"
+                    class="border-0"
+                    placeholder="Comment..."
+                  />
+                </div>
+                <div>
+                  <i class="fa-solid fa-ellipsis-vertical color-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card w-50 my-4" id="post-2">
+            <div class="card-header d-flex justify-content-between">
+              <div>
+                <h5>My Second Post</h5>
+              </div>
+              <div>
+                <h5>3/11</h5>
+              </div>
+            </div>
+            <img
+              src="https://picjumbo.com/wp-content/uploads/young-woman-workingtyping-on-her-laptop-free-photo.jpg"
+              class="card-img-top"
+              alt="pic-2"
+            />
+            <div class="card-body">
+              <h5 class="card-title d-flex flex-row">
+                <div id="likes-2" class="me-2"></div>
+                <span> Likes</span>
+              </h5>
+              <h5 class="card-text">
+                Sometimes its fun to show pictures of someone working and
+                pretending its you
+              </h5>
+              <div class="container-fluid d-flex justify-content-between">
+                <div>
+                  <i class="fa-regular fa-heart"></i>
+                  <input
+                    type="text"
+                    class="border-0"
+                    placeholder="Comment..."
+                  />
+                </div>
+                <div>
+                  <i class="fa-solid fa-ellipsis-vertical color-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card w-50 my-4" id="post-3">
+            <div class="card-header d-flex justify-content-between">
+              <div>
+                <h5>Some Stock Background Image</h5>
+              </div>
+              <div>
+                <h5>3/11</h5>
+              </div>
+            </div>
+            <img
+              src="https://thumbs.dreamstime.com/b/seamless-greige-white-wavy-marl-stripe-texture-background-irregular-imperfect-striped-pattern-blurry-neutral-tone-wave-seamless-191196975.jpg"
+              class="card-img-top"
+              alt="pic-3"
+            />
+            <div class="card-body">
+              <h5 class="card-title d-flex flex-row">
+                <div id="likes-3" class="me-2"></div>
+                <span> Likes</span>
+              </h5>
+              <h5 class="card-text">
+                Well if this isn't a boring post, I don't know what is
+              </h5>
+              <div class="container-fluid d-flex justify-content-between">
+                <div>
+                  <i class="fa-regular fa-heart"></i>
+                  <input
+                    type="text"
+                    class="border-0"
+                    placeholder="Comment..."
+                  />
+                </div>
+                <div>
+                  <i class="fa-solid fa-ellipsis-vertical color-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card w-50 my-4" id="post-4">
+            <div class="card-header d-flex justify-content-between">
+              <div>
+                <h5>Skateboard Nap</h5>
+              </div>
+              <div>
+                <h5>3/11</h5>
+              </div>
+            </div>
+            <img
+              src="https://i.pinimg.com/originals/e9/48/11/e948110b0b3f0f7183922ad084830f1b.jpg"
+              class="card-img-top"
+              alt="pic-4"
+            />
+            <div class="card-body">
+              <h5 class="card-title d-flex flex-row">
+                <div id="likes-4" class="me-2"></div>
+                <span> Likes</span>
+              </h5>
+              <h5 class="card-text">It's hard out here for a punk pug</h5>
+              <div class="container-fluid d-flex justify-content-between">
+                <div>
+                  <i class="fa-regular fa-heart"></i>
+                  <input
+                    type="text"
+                    class="border-0"
+                    placeholder="Comment..."
+                  />
+                </div>
+                <div>
+                  <i class="fa-solid fa-ellipsis-vertical color-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card w-50 my-4" id="post-5">
+            <div class="card-header d-flex justify-content-between">
+              <div>
+                <h5>Mood</h5>
+              </div>
+              <div>
+                <h5>3/12</h5>
+              </div>
+            </div>
+            <img
+              src="https://i.redd.it/exenkunkvo931.jpg"
+              class="card-img-top"
+              alt="pic-5"
+            />
+            <div class="card-body">
+              <h5 class="card-title d-flex flex-row">
+                <div id="likes-5" class="me-2"></div>
+                <span> Likes</span>
+              </h5>
+              <h5 class="card-text">#MoodAF</h5>
+              <div class="container-fluid d-flex justify-content-between">
+                <div>
+                  <i class="fa-regular fa-heart"></i>
+                  <input
+                    type="text"
+                    class="border-0"
+                    placeholder="Comment..."
+                  />
+                </div>
+                <div>
+                  <i class="fa-solid fa-ellipsis-vertical color-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card w-50 my-4" id="post-6">
+            <div class="card-header d-flex justify-content-between">
+              <div>
+                <h5>Fiscal Responsibility</h5>
+              </div>
+              <div>
+                <h5>3/12</h5>
+              </div>
+            </div>
+            <img
+              src="https://i.pinimg.com/originals/f4/5b/0f/f45b0fba5f7d79db4212f2e750468daa.gif"
+              class="card-img-top"
+              alt="pic-6"
+            />
+            <div class="card-body">
+              <h5 class="card-title d-flex flex-row">
+                <div id="likes-6" class="me-2"></div>
+                <span> Likes</span>
+              </h5>
+              <h5 class="card-text">
+                Because one cannot code on an empty stomach
+              </h5>
+              <div class="container-fluid d-flex justify-content-between">
+                <div>
+                  <i class="fa-regular fa-heart"></i>
+                  <input
+                    type="text"
+                    class="border-0"
+                    placeholder="Comment..."
+                  />
+                </div>
+                <div>
+                  <i class="fa-solid fa-ellipsis-vertical color-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card w-50 my-4" id="post-7">
+            <div class="card-header d-flex justify-content-between">
+              <div>
+                <h5>Simple Organization</h5>
+              </div>
+              <div>
+                <h5>3/12</h5>
+              </div>
+            </div>
+            <img
+              src="https://m.media-amazon.com/images/I/61HwvtJXKGS._AC_SX522_.jpg"
+              class="card-img-top"
+              alt="pic-7"
+            />
+            <div class="card-body">
+              <h5 class="card-title d-flex flex-row">
+                <div id="likes-7" class="me-2"></div>
+                <span> Likes</span>
+              </h5>
+              <h5 class="card-text">
+                Now if only I could get my code to be this organized
+              </h5>
+              <div class="container-fluid d-flex justify-content-between">
+                <div>
+                  <i class="fa-regular fa-heart"></i>
+                  <input
+                    type="text"
+                    class="border-0"
+                    placeholder="Comment..."
+                  />
+                </div>
+                <div>
+                  <i class="fa-solid fa-ellipsis-vertical color-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card w-50 my-4" id="post-8">
+            <div class="card-header d-flex justify-content-between">
+              <div>
+                <h5>Wacky Costumes</h5>
+              </div>
+              <div>
+                <h5>3/13</h5>
+              </div>
+            </div>
+            <img
+              src="https://sep.yimg.com/ay/brandsonsale-store/80s-costumes-3.jpg"
+              class="card-img-top"
+              alt="pic-8"
+            />
+            <div class="card-body">
+              <h5 class="card-title d-flex flex-row">
+                <div id="likes-8" class="me-2"></div>
+                <span> Likes</span>
+              </h5>
+              <h5 class="card-text">
+                Could do this as a family costume simply titled "The 80's"
+              </h5>
+              <div class="container-fluid d-flex justify-content-between">
+                <div>
+                  <i class="fa-regular fa-heart"></i>
+                  <input
+                    type="text"
+                    class="border-0"
+                    placeholder="Comment..."
+                  />
+                </div>
+                <div>
+                  <i class="fa-solid fa-ellipsis-vertical color-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card w-50 my-4" id="post-9">
+            <div class="card-header d-flex justify-content-between">
+              <div>
+                <h5>Skillset</h5>
+              </div>
+              <div>
+                <h5>3/13</h5>
+              </div>
+            </div>
+            <img
+              src="https://nebushumor.files.wordpress.com/2020/10/far-side_gary-larson_buffalo-bill_12-october-2020.jpg"
+              class="card-img-top"
+              alt="pic-9"
+            />
+            <div class="card-body">
+              <h5 class="card-title d-flex flex-row">
+                <div id="likes-9" class="me-2"></div>
+                <span> Likes</span>
+              </h5>
+              <h5 class="card-text">
+                Everyone has a specialty. Not everyone's is always useful
+                <i class="fa-solid fa-face-grin-squint-tears"></i>
+              </h5>
+              <div class="container-fluid d-flex justify-content-between">
+                <div>
+                  <i class="fa-regular fa-heart"></i>
+                  <input
+                    type="text"
+                    class="border-0"
+                    placeholder="Comment..."
+                  />
+                </div>
+                <div>
+                  <i class="fa-solid fa-ellipsis-vertical color-light"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
